@@ -41,8 +41,13 @@ h6, .h6 {
  */
 
 .blog-masthead {
+<<<<<<< Updated upstream
   background-color: green;
   
+=======
+  background-color: #b8dfb6;
+
+>>>>>>> Stashed changes
 }
 .sticky {
   position: fixed;
