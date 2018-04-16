@@ -41,7 +41,7 @@ h6, .h6 {
  */
 
 .blog-masthead {
-  background-color: #b6c0df;
+  background-color: #121854;
 }
 
 /* Nav links */
@@ -50,7 +50,7 @@ h6, .h6 {
   display: inline-block;
   padding: 10px;
   font-weight: 500;
-  color: #07284f;
+  color: #ffffff;
 }
 .blog-nav-item:hover,
 .blog-nav-item:focus {
@@ -168,7 +168,7 @@ h6, .h6 {
   font-size: 60px;
   font-weight: normal;
   font-family:serif;
-  color: rgb(2, 23, 163)
+  color: rgb(23, 31, 79)
 }
 .blog-description {
   font-size: 20px;
