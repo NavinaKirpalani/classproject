@@ -33,12 +33,12 @@
 
   <body>
 
-    <div class="blog-masthead">
+    <div class="blog-masthead sticky">
       <div class="container">
         <nav class="blog-nav">
           <a class="blog-nav-item" href="#">Home</a> &nbsp;&nbsp;&nbsp;
           <a class="blog-nav-item" href="#apt1">Appartment 1</a>&nbsp;&nbsp;&nbsp;
-          <a class="blog-nav-item" href="apt2">Appartment 2</a>&nbsp;&nbsp;&nbsp;
+          <a class="blog-nav-item" href="#apt2">Appartment 2</a>&nbsp;&nbsp;&nbsp;
         </nav>
       </div>
     </div>
@@ -68,7 +68,7 @@
 
             <div class="blog-post">
               <h2 id="apt1" class="blog-post-title"> <strong>Appartment 125sq. meters 4 Rooms</strong></h2>
-              <p class="blog-post-meta">Last Updated: March 18 2018 <br>Owner: <a href="landlord1">Mark</a></p>
+              <p class="blog-post-meta">Last Updated: March 18 2018 <br>Owner: <a href="#landlord1">Mark</a></p>
               <!-- Slideshow container -->
               <div class="slideshow-container">
 
@@ -103,7 +103,7 @@
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
               </div>
-              <img class="img-responsive" src="http://apartmentswatermarkhotay.com/images/products/pic-duplex-4-bedroom-full-furnished-apartment-for-rent-in-watermark-hanoi-2015922202245.jpg" alt="A red Mazda FD RX-7 with an after-market spoiler">
+  
 <br>
             <h2 class="sub-header">Description</h2>
 
@@ -111,7 +111,7 @@
                 <li>4 Bedrooms </li>
                 <li>3 Bathrooms</li>
                 <li>2 Balconeys</li>
-                <li>  1 Kitchen</li>
+                <li> 1 Kitchen</li>
                 <li>1 Living Room</li>
                 <li>1 Dining Room</li>
               </ul> <br>
@@ -177,8 +177,9 @@
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
             <h4><a href="#">Advertisement</a></h4>
-            <img class="img-responsive" src="https://www.brightspark-consulting.com/wp-content/uploads/2017/03/brightspark_sidebarads_0217.jpg.png" alt="A red Mazda FD RX-7 with an after-market spoiler">
-
+            <a href="default.asp">
+              <img class="img-responsive" src="https://www.brightspark-consulting.com/wp-content/uploads/2017/03/brightspark_sidebarads_0217.jpg.png" alt="A red Mazda FD RX-7 with an after-market spoiler">
+              </a>
           <div class="sidebar-module"> <br>
             <h4>Elsewhere</h4>
             <ol class="list-unstyled">
@@ -208,5 +209,33 @@
     <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+      </script>
   </body>
 </html>
